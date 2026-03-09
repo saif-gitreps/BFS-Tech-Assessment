@@ -1,0 +1,34 @@
+{
+   "name": "bfs-tech",
+   "version": "1.0.0",
+   "main": "index.js",
+   "type": "module",
+   "repository": "https://github.com/saif-gitreps/BFS-Tech-Assessment.git",
+   "author": "Saif <droconos99@gmail.com>",
+   "license": "MIT",
+   "scripts": {
+      "build": "tsc",
+      "start": "node dist/index.js",
+      "dev": "concurrently \"tsc --watch\" \"node --watch dist/index.js\""
+   },
+   "devDependencies": {
+      "@types/cors": "^2.8.19",
+      "@types/express": "^5.0.6",
+      "@types/qrcode": "^1.5.6",
+      "@types/uuid": "^11.0.0",
+      "concurrently": "^9.2.1",
+      "typescript": "^5.9.3"
+   },
+   "dependencies": {
+      "cors": "^2.8.6",
+      "dotenv": "^17.3.1",
+      "express": "^5.2.1",
+      "express-rate-limit": "^8.3.0",
+      "express-validator": "^7.3.1",
+      "helmet": "^8.1.0",
+      "qrcode": "^1.5.4",
+      "socket.io": "^4.8.3",
+      "uuid": "^13.0.0",
+      "winston": "^3.19.0"
+   }
+}
