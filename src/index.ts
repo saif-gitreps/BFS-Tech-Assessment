@@ -7,6 +7,7 @@ import http from "http";
 import { handleError, handleNotFound } from "./middlewares/error.middleware.js";
 import logger from "./utils/logger.js";
 import { initSocketServer } from "./sockets/socketHandler.js";
+import messageRoutes from "./routes/message.routes.js";
 import { whatsappService } from "./services/whatsapp.services.js";
 
 const app = express();
@@ -21,6 +22,8 @@ app.use(express.static(path.join(__dirname, "..", "public")));
 app.get("/server-status", (_req: Request, res: Response) => {
    res.json({ success: true, message: "Server is running", uptime: process.uptime() });
 });
+
+app.use("/api", messageRoutes);
 
 app.use(handleNotFound);
 app.use(handleError);
