@@ -1,21 +1,26 @@
-# BFS-Tech-Assessment
+# WhatsApp Message Broker
 
-A node.js project with persistent authentication using whatsapp web with an endpoint to send messages.
+A Node.js backend service designed to bridge standard RESTful APIs with WhatsApp Web. This application provides a scalable, stateful, and modular solution for programmatically sending messages, managing sessions, and handling real-time authentication via WebSockets.
 
-### Important Stack/lib used:
+The system is built with a focus on concurrency management, session persistence, and clean architecture, making it suitable for integration into larger enterprise messaging ecosystems.
 
-- Express.js
-- TypeScript
-- Socket.io
-- whatsapp-web.js
-- p-queue
+## Key Features:
+- Real-Time QR Authentication: Implements Socket.IO to transmit WhatsApp Web QR codes from the server to the client in real-time, ensuring a seamless onboarding experience.
+
+- Session Persistence: Intelligent session management that stores authentication states, allowing the server to restart without requiring users to re-scan the QR code.
+
+- Automated Reconnection: Robust handling for network disruptions or session timeouts, ensuring the service remains online with minimal downtime.
+
+- Concurrency & Queuing: Integrated request handling to manage high-volume API calls. Optional queuing ensures that message delivery respects WhatsApp's operational limits and prevents rate-limiting issues.
+
+- Logging & Error Handling: Centralized error management and structured logging for easier debugging and production monitoring.
 
 ## Prerequisites
 
--Node.js ≥ 18
--Google Chrome or Chromium installed (used by Puppeteer under the hood)
--A WhatsApp account to authenticate with
--npm or yarn installed
+- Node.js ≥ 18
+- Google Chrome or Chromium installed (used by Puppeteer under the hood)
+- A WhatsApp account to authenticate with
+- npm or yarn installed
 
 ## Setup
 
